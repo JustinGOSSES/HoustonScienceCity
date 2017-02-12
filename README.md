@@ -5,6 +5,7 @@ Exploration of the idea you could map out all the different places science is ta
 
 ## Uncertainty:
 Major uncertainty is how to find all the necessary spatial information. Business's that create and apply science are plentiful in Houston, but how to do you find all of them and their locations? Even government agencies are difficult the data is often kept at agency specific level or covers everything including many agencies that wouldn't be associated with science to a large degree.
+	- One possible way to find businesses that use science is to use python to webcrawl or a job website's API to search for all job advertisements over the last year that mention a word from a list of words for scientist. If the structure is concsistent, it might be possible to programatically pull company names and then use a google map lookup to find locations. There would be false positives, but it might work out alright?
 
 ## Methods:
 Starting off using geojson from the city of Houston's <a href='http://cohgis-mycity.opendata.arcgis.com/' target="blank">open data GIS portal</a>. 
