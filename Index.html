@@ -64,7 +64,7 @@
 mapboxgl.accessToken = 'pk.eyJ1Ijoiamdvc3NlcyIsImEiOiJjaWk2aWhua2kwMWxidDBrZndhbHBraTd1In0.IIT7dwztvQhH9ZsiOLmnMg';
 var map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v9',
+    style: 'mapbox://styles/mapbox/dark-v9',
     zoom: 9.5,
     // center: [-71.97722138410576, -13.517379300798098]
     center: [-95.3698, 29.7604]
@@ -83,7 +83,7 @@ map.on('load', function () {
             'visibility': 'visible'
         },
         'paint': {
-            'circle-radius': 4,
+            'circle-radius': 3,
             'circle-color': '#43930d'
         },
         // 'source-layer': 'museum-cusco'
