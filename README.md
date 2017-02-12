@@ -52,6 +52,8 @@ http://cohgis-mycity.opendata.arcgis.com/datasets/59d52cd8fa9d463ea7cf9f3c0a0c6e
 - Various job APIs, a big list - https://www.programmableweb.com/news/70-jobs-apis-indeed-simply-hired-and-careerbuilder/2013/01/23
 - Inside Higher Ed job API - https://www.programmableweb.com/api/inside-higher-ed
 - Monster job search API - http://partner.monster.com/power-resume-search-devguide
+- google places API - https://developers.google.com/places/web-service/search
+
 
 
 
