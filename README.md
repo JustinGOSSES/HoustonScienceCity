@@ -1,5 +1,14 @@
 # Houston Science City Map
 
+## Purpose:
+Exploration of the idea you could map out all the different places science is taught, applied, and created in Houston, thereby giving people a great appreciation of how pevarsive it is in their lives. 
+
+## Uncertainty:
+Major uncertainty is how to find all the necessary spatial information. Business's that create and apply science are plentiful in Houston, but how to do you find all of them and their locations? Even government agencies are difficult the data is often kept at agency specific level or covers everything including many agencies that wouldn't be associated with science to a large degree.
+
+## Methods:
+Starting off using geojson from the city of Houston's <a href='http://cohgis-mycity.opendata.arcgis.com/' target="blank">open data GIS portal</a>. 
+
 ### Current Github Location: 
 https://github.com/JustinGOSSES/HoustonScienceCity.git
 
@@ -34,3 +43,5 @@ http://cohgis-mycity.opendata.arcgis.com/datasets/59d52cd8fa9d463ea7cf9f3c0a0c6e
 - County agencies?
 - Local agencies?
 - User suggested data?
+- data.gov https://catalog.data.gov/dataset
+- https://catalog.data.gov/dataset/college-scorecard
