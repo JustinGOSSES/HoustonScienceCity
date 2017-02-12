@@ -1,12 +1,10 @@
-Houston Science City Map
-# Test
+# Houston Science City Map
 
-
-#### Original Location: 
+### Current Github Location: 
 https://github.com/JustinGOSSES/HoustonScienceCity.git
 
-#### Started the map from this example:
-https://www.mapbox.com/mapbox.js/example/v1.0.0/geojson-marker-from-url/
+### Started the map from this example:
+https://www.mapbox.com/mapbox-gl-js/example/toggle-layers/
 
 #### Potential Map Data:
 - Houston science twitter handles?
