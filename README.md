@@ -47,3 +47,11 @@ http://cohgis-mycity.opendata.arcgis.com/datasets/59d52cd8fa9d463ea7cf9f3c0a0c6e
 - User suggested data?
 - data.gov https://catalog.data.gov/dataset
 - https://catalog.data.gov/dataset/college-scorecard
+- dice job board API - http://www.dice.com/common/content/util/apidoc/jobsearch.html
+- indeed API https://ads.indeed.com/jobroll/xmlfeed , meant for putting their widget on their site but might still work
+- Various job APIs, a big list - https://www.programmableweb.com/news/70-jobs-apis-indeed-simply-hired-and-careerbuilder/2013/01/23
+- Inside Higher Ed job API - https://www.programmableweb.com/api/inside-higher-ed
+- Monster job search API - http://partner.monster.com/power-resume-search-devguide
+
+
+
