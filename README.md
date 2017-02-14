@@ -54,6 +54,7 @@ http://cohgis-mycity.opendata.arcgis.com/datasets/59d52cd8fa9d463ea7cf9f3c0a0c6e
 - Monster job search API - http://partner.monster.com/power-resume-search-devguide
 - google places API - https://developers.google.com/places/web-service/search
 
-
+Inline-style: 
+![alt text](https://github.com/JustinGOSSES/HoustonScienceCity/Images/earlyMap.png "early version of map")
 
 
