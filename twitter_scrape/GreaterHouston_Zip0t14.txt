@@ -1,0 +1,14 @@
+{'location': [29.76, -95.37], 'tweets': []}
+{'location': [29.75, -95.35], 'tweets': []}
+{'location': [29.72, -95.36], 'tweets': []}
+{'location': [29.72, -95.42], 'tweets': []}
+{'location': [29.74, -95.39], 'tweets': []}
+{'location': [29.77, -95.41], 'tweets': []}
+{'location': [29.8, -95.42], 'tweets': []}
+{'location': [29.8, -95.37], 'tweets': []}
+{'location': [29.75, -95.36], 'tweets': []}
+{'location': [29.74, -95.31], 'tweets': []}
+{'location': [29.72, -95.27], 'tweets': []}
+{'location': [29.79, -95.23], 'tweets': []}
+{'location': [29.98, -95.46], 'tweets': []}
+{'location': [29.76, -95.17], 'tweets': []}
