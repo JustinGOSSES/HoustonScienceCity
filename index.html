@@ -73,7 +73,7 @@ var map = new mapboxgl.Map({
 map.on('load', function () {
     map.addSource('schools', {
         type: 'geojson',
-        data: 'http://cohgis-mycity.opendata.arcgis.com/datasets/59d52cd8fa9d463ea7cf9f3c0a0c6ea2_0.geojson'
+        data: 'https://cohgis-mycity.opendata.arcgis.com/datasets/59d52cd8fa9d463ea7cf9f3c0a0c6ea2_0.geojson'
     });
     map.addLayer({
         'id': 'schools',
@@ -91,7 +91,7 @@ map.on('load', function () {
 
     map.addSource('libraries', {
         type: 'geojson',
-        data: 'http://cohgis-mycity.opendata.arcgis.com/datasets/59d52cd8fa9d463ea7cf9f3c0a0c6ea2_12.geojson'
+        data: 'https://cohgis-mycity.opendata.arcgis.com/datasets/59d52cd8fa9d463ea7cf9f3c0a0c6ea2_12.geojson'
     });
     map.addLayer({
         'id': 'libraries',
@@ -108,7 +108,7 @@ map.on('load', function () {
     });
     map.addSource('hospitals', {
         type: 'geojson',
-        data: 'http://cohgis-mycity.opendata.arcgis.com/datasets/59d52cd8fa9d463ea7cf9f3c0a0c6ea2_10.geojson'
+        data: 'https://cohgis-mycity.opendata.arcgis.com/datasets/59d52cd8fa9d463ea7cf9f3c0a0c6ea2_10.geojson'
     });
     map.addLayer({
         'id': 'hospitals',
