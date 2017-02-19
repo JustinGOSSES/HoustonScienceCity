@@ -1,5 +1,8 @@
 # Houston Science City Map
 
+Current map is <a href="https://justingosses.github.io/HoustonScienceCity/">live</a> as a github.io page
+
+
 ## Purpose:
 Exploration of the idea you could map out all the different places science is taught, applied, and created in Houston, thereby giving people a great appreciation of how pevarsive it is in their lives. 
 
