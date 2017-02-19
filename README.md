@@ -3,22 +3,26 @@
 ## Purpose:
 Exploration of the idea you could map out all the different places science is taught, applied, and created in Houston, thereby giving people a great appreciation of how pevarsive it is in their lives. 
 
-## Uncertainty:
-Major uncertainty is how to find all the necessary spatial information. Business's that create and apply science are plentiful in Houston, but how to do you find all of them and their locations? Even government agencies are difficult the data is often kept at agency specific level or covers everything including many agencies that wouldn't be associated with science to a large degree.
-
-- One possible way to find businesses that use science is to use python to webcrawl or a job website's API to search for all job advertisements over the last year that mention a word from a list of words for scientist. If the structure is concsistent, it might be possible to programatically pull company names and then use a google map lookup to find locations. There would be false positives, but it might work out alright?
-- Another method would be to do a series of twitter API searches around the #reallivingscientist with the distance criteria of 10 or 20 kilometers and the centerpoint set to various zip code centerpoints. The data wouldn't be specific to an exact point but could at least be positioned at neighborhood level and could involved photos and text. 
-
-## Methods:
-Starting off using geojson from the city of Houston's <a href='http://cohgis-mycity.opendata.arcgis.com/' target="blank">open data GIS portal</a>. 
-
 ### Current Github Location: 
 https://github.com/JustinGOSSES/HoustonScienceCity.git
 
 ### Started the map from this example:
 https://www.mapbox.com/mapbox-gl-js/example/toggle-layers/
 
-#### Potential Map Data:
+## Methods Brainstorming:
+1.Starting off using geojson from the city of Houston's <a href='http://cohgis-mycity.opendata.arcgis.com/' target="blank">open data GIS portal</a>. 
+
+2. One possible way to find businesses that use science is to webscrape or a job website's API to search for all job advertisements over the last year that mention a word from a list of words for scientist. The next step would be to pull company names from those returns and use a google places API to find all the locations. Those latitudes could be plotted on the map with some of the meta data. There would be false positives, but it might work out alright?
+	- Update: 
+		- The google places API will work fairly well for an input of business name and city. There are some complications having to do with API responses being limited to 20 items, but that limit can be got around by constraining API calls to smaller areas of geography. 
+			- Some good results were found using science related terms like 'laboratory' and 'oil and gas'. A decent number of results, perhaps in the hundreds, could be produced with a decent sized list of creative terms?
+		- The job sites APIs are mostly closed it seems. Access is limited websites that would put their data or links on their page and provide clicks back to the original job search site. Web scaping using beautiful soup might be a more likely option?
+
+- Another method would be to do a series of twitter API searches around the #reallivingscientist with the distance criteria of 10 or 20 kilometers and the centerpoint set to various zip code centerpoints. The data wouldn't be specific to an exact point but could at least be positioned at neighborhood level and could involved photos and text. 
+	- This works well. It requires a bit more work on formatting into better organized json, compilation of multiple API calls into a single file, and then transformation into geoJSON to get it on the map. 
+
+
+#### Original List of Potential Map Data:
 - Houston science twitter handles?
 - Job ad at this company mentioned science
 - Actually a Scientist
@@ -58,5 +62,3 @@ http://cohgis-mycity.opendata.arcgis.com/datasets/59d52cd8fa9d463ea7cf9f3c0a0c6e
 ### Early Map
 ![bad photo!]
 (https://github.com/JustinGOSSES/HoustonScienceCity/blob/master/Images/earlyMap.png)
-
-
