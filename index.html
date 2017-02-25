@@ -84,10 +84,49 @@ map.on('load', function () {
         },
         'paint': {
             'circle-radius': 3,
-            'circle-color': '#43930d'
+            'circle-color': '#a5f7b7'
         },
         // 'source-layer': 'museum-cusco'
     });
+
+
+    map.addSource('test', {
+        type: 'geojson',
+        data: 'DATA/data5.geojson'
+    });
+    map.addLayer({
+        'id': 'test',
+        'type': 'circle',
+        'source': 'test',
+        'layout': {
+            'visibility': 'visible'
+        },
+        'paint': {
+            'circle-radius': 10,
+            'circle-color': '#ff00fa'
+        },
+        // 'source-layer': 'museum-cusco'
+    });
+
+
+    map.addSource('BP', {
+        type: 'geojson',
+        data: 'DATA/BP_results_test.geojson'
+    });
+    map.addLayer({
+        'id': 'BP',
+        'type': 'circle',
+        'source': 'BP',
+        'layout': {
+            'visibility': 'visible'
+        },
+        'paint': {
+            'circle-radius': 8,
+            'circle-color': '#2a783c'
+        },
+        // 'source-layer': 'museum-cusco'
+    });
+
 
     map.addSource('libraries', {
         type: 'geojson',
@@ -125,7 +164,7 @@ map.on('load', function () {
     });
 });
 
-var toggleableLayerIds = [ 'libraries', 'schools', 'hospitals'];
+var toggleableLayerIds = [ 'BP','libraries', 'test', 'hospitals','schools'];
 
 for (var i = 0; i < toggleableLayerIds.length; i++) {
     var id = toggleableLayerIds[i];
@@ -156,7 +195,8 @@ for (var i = 0; i < toggleableLayerIds.length; i++) {
 }
 
 map.on('click', function (e) {
-    var features = map.queryRenderedFeatures(e.point, { layers: ['schools','libraries','hospitals'] });
+    // console.log("test",)
+    var features = map.queryRenderedFeatures(e.point, { layers: ['schools','libraries','hospitals','test','BP'] });
 
     if (!features.length) {
         return;
@@ -175,6 +215,9 @@ map.on('click', function (e) {
     }
     else if(layerID === 'libraries'){
         layerSpecPopUp = "LIBRARY"
+    }
+    else if(layerID === 'test' || layerID === 'BP'){
+        layerSpecPopUp = "name"
     }
     else{layerSpecPopUp = "NAME"}
 

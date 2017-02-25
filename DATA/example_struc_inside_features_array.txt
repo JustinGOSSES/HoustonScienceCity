@@ -1,0 +1,35 @@
+{"type":"Feature",
+
+"properties":{
+	"OBJECTID_1":1001,
+	"OBJECTID":7363,
+	"DISTRICT":"101907",
+	"DISTNAME":"CYPRESS-FAIRBANKS ISD",
+	"CAMPUS":"101907147",
+	"CAMPNAME":"POSTMA ELEMENTARY",
+	"STREET_MAI":"18425 WEST RD",
+	"CITY_MAIL":"CYPRESS",
+	"ZIP_MAIL":"77433",
+	"STREET":"18425 W RD",
+	"CITY":"CYPRESS",
+	"ZIP":"77433",
+	"COUNTY":"101",
+	"CNTYNAME":"HARRIS COUNTY",
+	"REGION":"04",
+	"GRADERANGE":"EE PK KG 01 02 03 04 05",
+	"GRADEGRP":"1","VERIFY":"0",
+	"INSTR_TYPE":"REGULAR INSTRUCTIONAL",
+	"PHONE":"(281) 345-3660",
+	"EMAIL":"kathy.freed@cfisd.net",
+	"WEB":"www.cfisd.net",
+	"RSDNTLFAC":"No",
+	"MAGNET":"No",
+	"CHART_TYPE":" ",
+	"FAX":"(281) 345-3545",
+	"NAME":" ","FENAME":" "
+	},
+"geometry":{
+	"type":"Point",
+	"coordinates":[-95.70308550521447,29.908343260182882]
+	}
+}
