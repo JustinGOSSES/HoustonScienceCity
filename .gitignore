@@ -1,0 +1,6 @@
+config.rtf
+.DS_Store
+config.conf
+venv
+include
+python3.5m
