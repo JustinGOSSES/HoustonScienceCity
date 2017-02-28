@@ -1,6 +1,2 @@
-config.rtf
-.DS_Store
-config.conf
-venv
-include
-python3.5m
+twitter_scrape/config.conf
+googlePlacesAPI/config.conf
