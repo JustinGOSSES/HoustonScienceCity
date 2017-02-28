@@ -90,6 +90,23 @@ map.on('load', function () {
     });
 
 
+    map.addSource('job_ads', {
+        type: 'geojson',
+        data: 'DATA/Big_company_list_A-B_v6big_test.geojson'
+    });
+    map.addLayer({
+        'id': 'job_ads',
+        'type': 'circle',
+        'source': 'job_ads',
+        'layout': {
+            'visibility': 'visible'
+        },
+        'paint': {
+            'circle-radius': 7,
+            'circle-color': '#ff77fa'
+        },
+    });
+
     map.addSource('test', {
         type: 'geojson',
         data: 'DATA/data5.geojson'
@@ -164,7 +181,7 @@ map.on('load', function () {
     });
 });
 
-var toggleableLayerIds = [ 'BP','libraries', 'test', 'hospitals','schools'];
+var toggleableLayerIds = [ 'BP','libraries', 'test', 'hospitals','schools','job_ads'];
 
 for (var i = 0; i < toggleableLayerIds.length; i++) {
     var id = toggleableLayerIds[i];
@@ -196,7 +213,7 @@ for (var i = 0; i < toggleableLayerIds.length; i++) {
 
 map.on('click', function (e) {
     // console.log("test",)
-    var features = map.queryRenderedFeatures(e.point, { layers: ['schools','libraries','hospitals','test','BP'] });
+    var features = map.queryRenderedFeatures(e.point, { layers: ['job_ads','schools','libraries','hospitals','test','BP'] });
 
     if (!features.length) {
         return;
@@ -216,7 +233,7 @@ map.on('click', function (e) {
     else if(layerID === 'libraries'){
         layerSpecPopUp = "LIBRARY"
     }
-    else if(layerID === 'test' || layerID === 'BP'){
+    else if(layerID === 'test' || layerID === 'BP' || layerID === 'job_ads'){
         layerSpecPopUp = "name"
     }
     else{layerSpecPopUp = "NAME"}
