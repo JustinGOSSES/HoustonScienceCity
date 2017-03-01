@@ -8,7 +8,7 @@
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.32.1/mapbox-gl.css' rel='stylesheet' />
     <style>
         body { margin:0; padding:0; }
-        #map { position:absolute; top:0; bottom:0; width:100%; }
+        #map { position:absolute; top:0; bottom:0; width:100%;z-index:-1 }
     </style>
 </head>
 <body>
@@ -38,6 +38,32 @@
         text-align: center;
     }
 
+    div#about {position:absolute;bottom:0em;left:0em;padding-left:0.5em;padding-right:0.5em;padding-top:0em;margin-top:0px;z-index:2;background-color:#eaeaea;text-decoration: none;border-bottom: 1px solid rgba(0,0,0,0.25);text-align: center;opacity: 0.5;}
+    
+    #about p {vertical-align: text-top;font-family: 'Open Sans', sans-serif;text-decoration: none;font-size: 13px;color:black;}
+
+    a {text-decoration: none}
+
+    div.title{  
+    margin-bottom:-1em;
+    padding-bottom:-2em;
+    opacity: 0.5;
+    position: absolute;
+    left: 33%; bottom: -1.3em; right: 33%;
+    text-decoration: none;
+    z-index:2;
+    margin-top:0em;
+    margin-bottom:0em;
+    }
+
+   h2#title {
+    background: #FFFFFF;
+    color:black;
+    font-family: 'Open Sans', sans-serif;text-decoration: none;
+    text-align: center;
+    }
+
+
     #menu a:last-child {
         border: none;
     }
@@ -47,8 +73,30 @@
         color: #404040;
     }
 
-    #menu a.active {
+ /*   #menu a.active {
         background-color: #3887be;
+        color: #ffffff;
+    }*/
+    
+    #menu a.schools {
+        background-color: #7abe93;
+        color: #ffffff;
+    }
+    #menu a.JobAds_AtoB {
+        background-color: #C33C54;
+        color: #ffffff;
+    }
+  /*  #menu a.BP {
+        background-color: #F4F1BB;
+        color: #ffffff;
+    }*/
+
+    #menu a.libraries {
+        background-color: #f4b516;
+        color: #ffffff;
+    }
+    #menu a.hospitals {
+        background-color: #81bce6;
         color: #ffffff;
     }
 
@@ -59,7 +107,16 @@
 
 <nav id="menu"></nav>
 <div id="map"></div>
-
+<div id="about">
+    <a href="https://github.com/JustinGOSSES/HoustonScienceCity">
+        <p>
+            About This Map
+        </p>
+    </a>
+</div>
+<div class="title">
+    <h2 id="title">Where Science Happens in Houston</h2>
+</div>
 <script>
 mapboxgl.accessToken = 'pk.eyJ1Ijoiamdvc3NlcyIsImEiOiJjaWk2aWhua2kwMWxidDBrZndhbHBraTd1In0.IIT7dwztvQhH9ZsiOLmnMg';
 var map = new mapboxgl.Map({
@@ -83,66 +140,65 @@ map.on('load', function () {
             'visibility': 'visible'
         },
         'paint': {
-            'circle-radius': 3,
-            'circle-color': '#a5f7b7'
+            'circle-radius': 4,
+            'circle-color': '#7abe93'
         },
         // 'source-layer': 'museum-cusco'
     });
 
 
-    map.addSource('job_ads', {
+    map.addSource('JobAds_AtoB', {
         type: 'geojson',
-        data: 'DATA/Big_company_list_A-B_v6big_test.geojson'
+        data: 'DATA/Big_company_list_A-B_v6bbig_test.geojson'
     });
     map.addLayer({
-        'id': 'job_ads',
+        'id': 'JobAds_AtoB',
         'type': 'circle',
-        'source': 'job_ads',
+        'source': 'JobAds_AtoB',
         'layout': {
             'visibility': 'visible'
         },
         'paint': {
-            'circle-radius': 7,
-            'circle-color': '#ff77fa'
+            'circle-radius': 4,
+            'circle-color': '#C33C54'
         },
     });
 
-    map.addSource('test', {
-        type: 'geojson',
-        data: 'DATA/data5.geojson'
-    });
-    map.addLayer({
-        'id': 'test',
-        'type': 'circle',
-        'source': 'test',
-        'layout': {
-            'visibility': 'visible'
-        },
-        'paint': {
-            'circle-radius': 10,
-            'circle-color': '#ff00fa'
-        },
-        // 'source-layer': 'museum-cusco'
-    });
+    // map.addSource('test', {
+    //     type: 'geojson',
+    //     data: 'DATA/data5.geojson'
+    // });
+    // map.addLayer({
+    //     'id': 'test',
+    //     'type': 'circle',
+    //     'source': 'test',
+    //     'layout': {
+    //         'visibility': 'visible'
+    //     },
+    //     'paint': {
+    //         'circle-radius': 10,
+    //         'circle-color': '#ff00fa'
+    //     },
+    // });
 
 
-    map.addSource('BP', {
-        type: 'geojson',
-        data: 'DATA/BP_results_test.geojson'
-    });
-    map.addLayer({
-        'id': 'BP',
-        'type': 'circle',
-        'source': 'BP',
-        'layout': {
-            'visibility': 'visible'
-        },
-        'paint': {
-            'circle-radius': 8,
-            'circle-color': '#2a783c'
-        },
-        // 'source-layer': 'museum-cusco'
-    });
+    // map.addSource('BP', {
+    //     type: 'geojson',
+    //     data: 'DATA/BP_results_test.geojson'
+    // });
+    // map.addLayer({
+    //     'id': 'BP',
+    //     'type': 'circle',
+    //     'source': 'BP',
+    //     'layout': {
+    //         'visibility': 'visible'
+    //     },
+    //     'paint': {
+    //         'circle-radius': 4,
+    //         'circle-color': '#F4F1BB'
+    //     },
+    //     // 'source-layer': 'museum-cusco'
+    // });
 
 
     map.addSource('libraries', {
@@ -158,8 +214,8 @@ map.on('load', function () {
             'visibility': 'visible'
         },
        'paint': {
-            'circle-radius': 6,
-            'circle-color': 'rgba(155,48,19,1)'
+            'circle-radius': 4,
+            'circle-color': '#f4b516'
         }
     });
     map.addSource('hospitals', {
@@ -175,20 +231,21 @@ map.on('load', function () {
             'visibility': 'visible'
         },
        'paint': {
-            'circle-radius': 6,
-            'circle-color': '#5EA7D1'
+            'circle-radius': 4,
+            'circle-color': '#81bce6'
         }
     });
 });
 
-var toggleableLayerIds = [ 'BP','libraries', 'test', 'hospitals','schools','job_ads'];
+var toggleableLayerIds = ['libraries', 'hospitals','schools','JobAds_AtoB'];
 
 for (var i = 0; i < toggleableLayerIds.length; i++) {
     var id = toggleableLayerIds[i];
 
     var link = document.createElement('a');
     link.href = '#';
-    link.className = 'active';
+    // link.className = 'active';
+    link.className = id;
     link.textContent = id;
 
     link.onclick = function (e) {
@@ -202,7 +259,8 @@ for (var i = 0; i < toggleableLayerIds.length; i++) {
             map.setLayoutProperty(clickedLayer, 'visibility', 'none');
             this.className = '';
         } else {
-            this.className = 'active';
+            // this.className = 'active';
+            this.className = clickedLayer
             map.setLayoutProperty(clickedLayer, 'visibility', 'visible');
         }
     };
@@ -213,7 +271,7 @@ for (var i = 0; i < toggleableLayerIds.length; i++) {
 
 map.on('click', function (e) {
     // console.log("test",)
-    var features = map.queryRenderedFeatures(e.point, { layers: ['job_ads','schools','libraries','hospitals','test','BP'] });
+    var features = map.queryRenderedFeatures(e.point, { layers: ['JobAds_AtoB','schools','libraries','hospitals'] });
 
     if (!features.length) {
         return;
@@ -233,7 +291,7 @@ map.on('click', function (e) {
     else if(layerID === 'libraries'){
         layerSpecPopUp = "LIBRARY"
     }
-    else if(layerID === 'test' || layerID === 'BP' || layerID === 'job_ads'){
+    else if( layerID === 'BP' || layerID === 'JobAds_AtoB'){
         layerSpecPopUp = "name"
     }
     else{layerSpecPopUp = "NAME"}
