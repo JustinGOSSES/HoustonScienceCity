@@ -26,6 +26,19 @@ Exploration of the idea you could map out all the different places science is ta
 				- (plurity wins, so Exxon is applied even though they have a lot of patents too)
 		- use size to show hubs? 
 	- user generated context can be added to the map via integration with a google spreadsheet?
+	- heat map(s) to show densisty of certain types of science or industries? 
+		- How accurate are our ideas or where things clustter?
+	- user drawn shapes
+		- do they match actual distribution based on this data?
+			- Can they draw where Johnson Space Center is?
+			- Can they predict how distributed or clusttered a specific category is?
+				- "How well do you know Science in Houston?"
+
+##### non-Map data visualizations:
+	- job search term vs. number of resulting companies, bar chart?
+	- companies in order of number of different job search term matches, bar chart or tree diagram?
+	- science-related places on a route between two points
+	- street-map API photos returned to form a gallery of 'places where science is done'?
 
 ### Key Data Sources:
 	- List of science related job titles
