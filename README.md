@@ -16,6 +16,9 @@ Exploration of the idea you could map out all the different places science is ta
 	- #ActualLivingScientist hashtag tweets
 		- approximate position only
 		- include text & photos on hover? or click? or link to elsewhere? 
+	- User generate map based on science filters?
+		- generate filters based on search terms used in job titles
+		- generate aggregate filters based on a science ontology and job titles used in job search data collection
 	- All data points on one map
 		- color and shapes map to?
 			- schools, medical, oil&gas, aerospace, and other?
@@ -29,6 +32,8 @@ Exploration of the idea you could map out all the different places science is ta
 	- Job search information from websites
 	- Google Places API to find lat longs associated with company names from teh job search results
 	- Twitter posts gathered with the twitter API to return science related hashtags within certain radius of zip code centroids (centerpoints)
+	- geoJSON for various categories (schools, hospitals, museums, etc.) being pulled via a get request that returns geoJSon from the city of Houston's <a href='http://cohgis-mycity.opendata.arcgis.com/' target="blank">open data GIS portal</a>. 
+
 
 ### Current Github Location: 
 https://github.com/JustinGOSSES/HoustonScienceCity.git
