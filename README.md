@@ -6,11 +6,38 @@ Current map is <a href="https://justingosses.github.io/HoustonScienceCity/">live
 ## Purpose:
 Exploration of the idea you could map out all the different places science is taught, applied, and created in Houston, thereby giving people a great appreciation of how pevarsive it is in their lives. 
 
+## Possibe End Product:
+Series of maps exploring the geographic distribution of sciencec in Houston
+	- Key science hubs only:
+		- Johnson Space Space
+		- Medical Center
+		- Universities (Rice & Univ. Houston campuses & others?)
+		- Exxon, BP, Shell, Chevron, Citgo (big names with large office complexes)
+	- #ActualLivingScientist hashtag tweets
+		- approximate position only
+		- include text & photos on hover? or click? or link to elsewhere? 
+	- All data points on one map
+		- color and shapes map to?
+			- schools, medical, oil&gas, aerospace, and other?
+			- Science taught, created, applied 
+				- (plurity wins, so Exxon is applied even though they have a lot of patents too)
+		- use size to show hubs? 
+	- user generated context can be added to the map via integration with a google spreadsheet?
+
+### Key Data Sources:
+	- List of science related job titles
+	- Job search information from websites
+	- Google Places API to find lat longs associated with company names from teh job search results
+	- Twitter posts gathered with the twitter API to return science related hashtags within certain radius of zip code centroids (centerpoints)
+
 ### Current Github Location: 
 https://github.com/JustinGOSSES/HoustonScienceCity.git
 
 ### Started the map from this example:
 https://www.mapbox.com/mapbox-gl-js/example/toggle-layers/
+
+---------------------------------------
+
 
 ## Methods Brainstorming:
 1.Starting off using geojson from the city of Houston's <a href='http://cohgis-mycity.opendata.arcgis.com/' target="blank">open data GIS portal</a>. 
