@@ -14,6 +14,10 @@
 <body>
 
 <style>
+    .mapboxgl-popup {
+        max-width: 300px;
+        font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    }
     #menu {
         background: #fff;
         position: absolute;
@@ -86,13 +90,17 @@
         background-color: #C33C54;
         color: #ffffff;
     }
-  /*  #menu a.BP {
-        background-color: #F4F1BB;
+    #menu a.geology_geophys {
+        background-color: #bf8cdb;
         color: #ffffff;
-    }*/
+    }
+    #menu a.mini {
+        background-color: #b29443;
+        color: #ffffff;
+    }
 
     #menu a.libraries {
-        background-color: #f4b516;
+        background-color: #ff9e9e;
         color: #ffffff;
     }
     #menu a.hospitals {
@@ -164,41 +172,40 @@ map.on('load', function () {
         },
     });
 
-    // map.addSource('test', {
-    //     type: 'geojson',
-    //     data: 'DATA/data5.geojson'
-    // });
-    // map.addLayer({
-    //     'id': 'test',
-    //     'type': 'circle',
-    //     'source': 'test',
-    //     'layout': {
-    //         'visibility': 'visible'
-    //     },
-    //     'paint': {
-    //         'circle-radius': 10,
-    //         'circle-color': '#ff00fa'
-    //     },
-    // });
+    map.addSource('geology_geophys', {
+        type: 'geojson',
+        data: 'DATA/test_geojson_gAndg_v6.geojson'
+    });
+    map.addLayer({
+        'id': 'geology_geophys',
+        'type': 'circle',
+        'source': 'geology_geophys',
+        'layout': {
+            'visibility': 'visible'
+        },
+        'paint': {
+            'circle-radius': 5,
+            'circle-color': '#bf8cdb'
+        },
+    });
 
 
-    // map.addSource('BP', {
-    //     type: 'geojson',
-    //     data: 'DATA/BP_results_test.geojson'
-    // });
-    // map.addLayer({
-    //     'id': 'BP',
-    //     'type': 'circle',
-    //     'source': 'BP',
-    //     'layout': {
-    //         'visibility': 'visible'
-    //     },
-    //     'paint': {
-    //         'circle-radius': 4,
-    //         'circle-color': '#F4F1BB'
-    //     },
-    //     // 'source-layer': 'museum-cusco'
-    // });
+    map.addSource('mini', {
+        type: 'geojson',
+        data: 'DATA/test_geojson_Everything_v5.geojson'
+    });
+    map.addLayer({
+        'id': 'mini',
+        'type': 'circle',
+        'source': 'mini',
+        'layout': {
+            'visibility': 'visible'
+        },
+        'paint': {
+            'circle-radius': 6,
+            'circle-color': '#b29443'
+        },
+    });
 
 
     map.addSource('libraries', {
@@ -215,7 +222,7 @@ map.on('load', function () {
         },
        'paint': {
             'circle-radius': 4,
-            'circle-color': '#f4b516'
+            'circle-color': '#ff9e9e'
         }
     });
     map.addSource('hospitals', {
@@ -237,7 +244,7 @@ map.on('load', function () {
     });
 });
 
-var toggleableLayerIds = ['libraries', 'hospitals','schools','JobAds_AtoB'];
+var toggleableLayerIds = ['libraries', 'hospitals','schools','JobAds_AtoB','geology_geophys','mini'];
 
 for (var i = 0; i < toggleableLayerIds.length; i++) {
     var id = toggleableLayerIds[i];
@@ -271,7 +278,7 @@ for (var i = 0; i < toggleableLayerIds.length; i++) {
 
 map.on('click', function (e) {
     // console.log("test",)
-    var features = map.queryRenderedFeatures(e.point, { layers: ['JobAds_AtoB','schools','libraries','hospitals'] });
+    var features = map.queryRenderedFeatures(e.point, { layers: ['geology_geophys','JobAds_AtoB','schools','libraries','hospitals','mini'] });
 
     if (!features.length) {
         return;
@@ -287,19 +294,59 @@ map.on('click', function (e) {
     var layerSpecPopUp = ""
     if(layerID === 'schools'){
        layerSpecPopUp = "CAMPNAME"
-    }
-    else if(layerID === 'libraries'){
-        layerSpecPopUp = "LIBRARY"
-    }
-    else if( layerID === 'BP' || layerID === 'JobAds_AtoB'){
-        layerSpecPopUp = "name"
-    }
-    else{layerSpecPopUp = "NAME"}
-
-    var popup = new mapboxgl.Popup()
+       var popup = new mapboxgl.Popup()
         .setLngLat(feature.geometry.coordinates)
         .setHTML(feature.properties[layerSpecPopUp])
         .addTo(map);
+    }
+    else if(layerID === 'libraries'){
+        layerSpecPopUp = "LIBRARY"
+        var popup = new mapboxgl.Popup()
+        .setLngLat(feature.geometry.coordinates)
+        .setHTML(feature.properties[layerSpecPopUp])
+        .addTo(map);
+    }
+    else if(layerID === 'hospitals'){
+        layerSpecPopUp = "NAME"
+        var popup = new mapboxgl.Popup()
+        .setLngLat(feature.geometry.coordinates)
+        .setHTML(feature.properties[layerSpecPopUp])
+        .addTo(map);
+    }
+    else if( layerID === 'BP' || layerID === 'JobAds_AtoB'){
+        layerSpecPopUp = "name"
+        var popup = new mapboxgl.Popup()
+        .setLngLat(feature.geometry.coordinates)
+        .setHTML(feature.properties[layerSpecPopUp])
+        .addTo(map);
+    }
+    else if(layerID === 'geology_geophys' || layerID === 'mini'){
+         // var popup_html = feature.properties["name"]+" | job_title="+feature.properties["job_title"]+" | "+feature.properties["address"]+" | google type="+feature.properties["types"]
+         
+         var popup_html_1 = feature.properties["name"]
+         var popup_html_2 = "job_title="+feature.properties["job_title"]
+         var popup_html_3 = "address = "+feature.properties["address"]
+         var popup_html_4 = "google type="+feature.properties["types"]
+
+
+
+         var popup = new mapboxgl.Popup()
+            .setLngLat(feature.geometry.coordinates)
+            // .setHTML(feature.properties[layerSpecPopUp])
+            // .setHTML(popup_html)
+            //.setHTML(popup_html_1+popup_html_2+nbsp+popup_html_3+nbsp+popup_html_4)
+            .setHTML("<p>"+popup_html_1+"</p><p>"+popup_html_2+"</p><p>"+popup_html_3+"</p><p>"+popup_html_4+"</p>")
+            .addTo(map);
+    }
+    // else{layerSpecPopUp = "NAME"}
+    // var popup_html = feature.properties["name"]+" | job="+feature.properties["job_title"]+" | "+feature.properties["address"]+" | google type="+feature.properties["types"]
+    
+
+    // var popup = new mapboxgl.Popup()
+    //     .setLngLat(feature.geometry.coordinates)
+    //     // .setHTML(feature.properties[layerSpecPopUp])
+    //     .setHTML(popup_html)
+    //     .addTo(map);
 });
 
 

@@ -1,0 +1,166 @@
+Job_Title,likely_Industry,field_of_science
+Bioanalytical Scientist,health,biology
+Biochemist,health,biology
+Biochemistry,health,biology
+Bioinformatics Research Scientist,health,biology
+Biological Engineer,health,biology
+Biologist,health,biology
+biology  ,health,biology
+biomechanical,health,biology
+Biomedical scientist,health,biology
+biophysics,health,biology
+Cell Line,health,biology
+Clinical Data,health,biology
+Clinical Data Research,health,biology
+Clinical Pharmacology Professor,health,biology
+Clinical Pharmacy Assistant,health,biology
+Clinical Research Associate,health,biology
+Drug Evaluator,health,chemistry
+Drug Regulatory Affairs Manager,health,chemistry
+Environmental Health Scientist,health,biology
+Genetic Counselor,health,biology
+Health Research,health,biology
+Health Technology,health,biology
+Healthcare science,health,biology
+Hospital Research Assistant,health,biology
+Immunology Scientist,health,biology
+Life Science,health,biology
+Medical,health,biology
+Medical Center,health,biology
+medical Laboratory,health,biology
+Medical laboratory scientist,health,biology
+Medical Physics Researcher,health,biology
+Medical Research Assistant,health,biology
+Medical Research Technician,health,biology
+Medical Scientist,health,biology
+Microbiologist,health,biology
+Molecular Biologist,health,biology
+Molecular physics,health,physics
+Neuroscientist,health,biology
+Nuclear,health,physics
+Oncology Researcher,health,biology
+Pathologist,health,biology
+Pharmaceutical Assistant,health,chemistry
+Pharmaceutical Research Analyst,health,chemistry
+Pharmaceutical Research Assistant,health,chemistry
+Pharmaceutical Technician,health,chemistry
+Pharmacy Assistant,health,chemistry
+Photochemistry,health,chemistry
+Public Health Specialist,health,biology
+radiobiology,health,physics
+Radiochemistry,health,chemistry
+Toxicologist,health,biology
+Agricultural,other,biology
+Archaeologist,other,social
+Associate Professor,other,generic
+Botanist,other,biology
+botany,other,biology
+Chemical,other,chemistry
+Chemist,other,chemistry
+Climate Data,other,earth science
+Conservation,other,biology
+Field Technician,other,generic
+Forensic Chemist,other,chemistry
+Forensic Scientist,other,chemistry
+Herpetologist,other,biology
+Laboratory Instructor,other,generic
+Laboratory Technician,other,generic
+meteorologist ,other,earth science
+Natural Science,other,generic
+Naturalist,other,biology
+Oceanographer,other,earth science
+oceanography,other,earth science
+optomitrist ,other,biology
+Physical Scientist,other,physics
+Psychologist,other,social
+Research and Development Associate,other,generic
+Research and Development Director,other,generic
+Research and Development Manager,other,generic
+Research and Development Supervisor,other,generic
+Research and Development Technician,other,generic
+Research and Innovation,other,generic
+Research Fellow,other,generic
+Research Scientist,other,generic
+Researcher,other,generic
+science intern,other,generic
+Science teacher,other,generic
+Science Writer,other,generic
+Scientist,other,generic
+social science,other,social
+Solid-state,other,physics
+STEM Career Advisor,other,generic
+Stem Cell Researcher,other,biology
+Stereochemistry,other,chemistry
+Structural Biologist,other,biology
+Theoretical,other,generic
+Volcanologist,other,earth science
+volcanology,other,earth science
+wind power,other,engineering
+wind turbine ,other,engineering
+zoo,other,biology
+Zoologist,other,biology
+zoology ,other,biology
+chemistry,petroleum,chemistry
+Crystallography,petroleum,earth science
+Earth Science,petroleum,earth science
+Ecologist,petroleum,biology
+Ecology,petroleum,biology
+Environmental,petroleum,biology
+Environmental Emergencies,petroleum,biology
+Environmental Research Assistant,petroleum,chemistry
+Environmental Specialist,petroleum,chemistry
+Exploration,petroleum,earth science
+fluid dynamics,petroleum,physics
+geochemist,petroleum,earth science
+Geochemistry,petroleum,earth science
+Geographer,petroleum,social
+Geologist,petroleum,earth science
+geology ,petroleum,earth science
+geophysicist,petroleum,earth science
+GiS ,petroleum,social
+Groundwater Technician,petroleum,earth science
+hydrology,petroleum,earth science
+Inorganic,petroleum,chemistry
+lab technician,petroleum,generic
+Materials science,petroleum,engineering
+micropaleontologist,petroleum,earth science
+operations geologist,petroleum,earth science
+paleoclimatology,petroleum,earth science
+paleoecology,petroleum,earth science
+Paleontologist,petroleum,earth science
+Petroleum geologist,petroleum,earth science
+petrophysicist,petroleum,earth science
+playnology,petroleum,earth science
+Research and Development Chemist,petroleum,chemistry
+Research Chemist,petroleum,chemistry
+reservoir engineer,petroleum,engineering
+reservoir modeler,petroleum,earth science
+rock Laboratory,petroleum,earth science
+sedimentologist,petroleum,earth science
+stratigraphy,petroleum,earth science
+subsea engineer,petroleum,engineering
+aeronautics,space,engineering
+Aerospace,space,engineering
+astrobiology,space,biology
+Astrochemistry,space,chemistry
+astromaterials,space,earth science
+Astronaut,space,physics
+Astronomer,space,physics
+astronomy,space,physics
+astrophysics,space,physics
+Food chemistry,space,chemistry
+heliophysics,space,physics
+International Space Station,space,generic
+Johnson Space Center,space,generic
+lunar,space,earth science
+materials engineer,space,engineering
+NASA,space,generic
+Physicist,space,physics
+physics,space,physics
+Planetary  ,space,earth science
+planetary geology,space,earth science
+propulsion engineer,space,engineering
+Satellite,space,generic
+space engineer,space,engineering
+Space science,space,generic
+telemetry,space,engineering
