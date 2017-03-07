@@ -94,7 +94,7 @@
         background-color: #bf8cdb;
         color: #ffffff;
     }
-    #menu a.mini {
+    #menu a.3of3_jobSearch {
         background-color: #b29443;
         color: #ffffff;
     }
@@ -190,19 +190,25 @@ map.on('load', function () {
     });
 
 
-    map.addSource('mini', {
+    map.addSource('3of3_jobSearch', {
         type: 'geojson',
-        data: 'DATA/test_geojson_Everything_v5.geojson'
+        // data: 'DATA/test_geojson_Everything_v5.geojson'
+        // data: 'DATA/test_geojson_Everything_Short3_v1.geojson'
+        data: 'DATA/test_geojson_Everything_3of3_v2.geojson'
+       
+        
+
+        
     });
     map.addLayer({
-        'id': 'mini',
+        'id': '3of3_jobSearch',
         'type': 'circle',
-        'source': 'mini',
+        'source': '3of3_jobSearch',
         'layout': {
             'visibility': 'visible'
         },
         'paint': {
-            'circle-radius': 6,
+            'circle-radius': 5,
             'circle-color': '#b29443'
         },
     });
@@ -244,7 +250,7 @@ map.on('load', function () {
     });
 });
 
-var toggleableLayerIds = ['libraries', 'hospitals','schools','JobAds_AtoB','geology_geophys','mini'];
+var toggleableLayerIds = ['libraries', 'hospitals','schools','JobAds_AtoB','geology_geophys','3of3_jobSearch'];
 
 for (var i = 0; i < toggleableLayerIds.length; i++) {
     var id = toggleableLayerIds[i];
@@ -278,7 +284,7 @@ for (var i = 0; i < toggleableLayerIds.length; i++) {
 
 map.on('click', function (e) {
     // console.log("test",)
-    var features = map.queryRenderedFeatures(e.point, { layers: ['geology_geophys','JobAds_AtoB','schools','libraries','hospitals','mini'] });
+    var features = map.queryRenderedFeatures(e.point, { layers: ['geology_geophys','JobAds_AtoB','schools','libraries','hospitals','3of3_jobSearch'] });
 
     if (!features.length) {
         return;
@@ -320,13 +326,15 @@ map.on('click', function (e) {
         .setHTML(feature.properties[layerSpecPopUp])
         .addTo(map);
     }
-    else if(layerID === 'geology_geophys' || layerID === 'mini'){
+    else if(layerID === 'geology_geophys' || layerID === '3of3_jobSearch'){
          // var popup_html = feature.properties["name"]+" | job_title="+feature.properties["job_title"]+" | "+feature.properties["address"]+" | google type="+feature.properties["types"]
          
          var popup_html_1 = feature.properties["name"]
-         var popup_html_2 = "job_title="+feature.properties["job_title"]
-         var popup_html_3 = "address = "+feature.properties["address"]
-         var popup_html_4 = "google type="+feature.properties["types"]
+         var popup_html_2 = "job_title = "+feature.properties["job_title"]
+         var popup_html_3 = "company searched for = "+feature.properties["commpany_searched_for"]
+         var popup_html_4 = "address = "+feature.properties["address"]
+         var popup_html_5 = "google type = "+feature.properties["types"]
+
 
 
 
@@ -335,7 +343,7 @@ map.on('click', function (e) {
             // .setHTML(feature.properties[layerSpecPopUp])
             // .setHTML(popup_html)
             //.setHTML(popup_html_1+popup_html_2+nbsp+popup_html_3+nbsp+popup_html_4)
-            .setHTML("<p>"+popup_html_1+"</p><p>"+popup_html_2+"</p><p>"+popup_html_3+"</p><p>"+popup_html_4+"</p>")
+            .setHTML("<p>"+popup_html_1+"</p><p>"+popup_html_2+"</p><p>"+popup_html_3+"</p><p>"+popup_html_4+"</p><p>"+popup_html_5+"</p>")
             .addTo(map);
     }
     // else{layerSpecPopUp = "NAME"}
