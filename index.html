@@ -94,8 +94,16 @@
         background-color: #bf8cdb;
         color: #ffffff;
     }
-    #menu a.3of3_jobSearch {
+    #menu a.a1of3_jobSearch {
+        background-color: #ddda7e;
+        color: #ffffff;
+    }
+    #menu a.a3of3_jobSearch {
         background-color: #b29443;
+        color: #ffffff;
+    }
+    #menu a.a2of3_jobSearch {
+        background-color: #ffbc38;
         color: #ffffff;
     }
 
@@ -155,22 +163,22 @@ map.on('load', function () {
     });
 
 
-    map.addSource('JobAds_AtoB', {
-        type: 'geojson',
-        data: 'DATA/Big_company_list_A-B_v6bbig_test.geojson'
-    });
-    map.addLayer({
-        'id': 'JobAds_AtoB',
-        'type': 'circle',
-        'source': 'JobAds_AtoB',
-        'layout': {
-            'visibility': 'visible'
-        },
-        'paint': {
-            'circle-radius': 4,
-            'circle-color': '#C33C54'
-        },
-    });
+    // map.addSource('JobAds_AtoB', {
+    //     type: 'geojson',
+    //     data: 'DATA/Big_company_list_A-B_v6bbig_test.geojson'
+    // });
+    // map.addLayer({
+    //     'id': 'JobAds_AtoB',
+    //     'type': 'circle',
+    //     'source': 'JobAds_AtoB',
+    //     'layout': {
+    //         'visibility': 'visible'
+    //     },
+    //     'paint': {
+    //         'circle-radius': 4,
+    //         'circle-color': '#C33C54'
+    //     },
+    // });
 
     map.addSource('geology_geophys', {
         type: 'geojson',
@@ -190,25 +198,62 @@ map.on('load', function () {
     });
 
 
-    map.addSource('3of3_jobSearch', {
+
+    map.addSource('a1of3_jobSearch', {
         type: 'geojson',
         // data: 'DATA/test_geojson_Everything_v5.geojson'
         // data: 'DATA/test_geojson_Everything_Short3_v1.geojson'
-        data: 'DATA/test_geojson_Everything_3of3_v2.geojson'
-       
-        
-
-        
+        data: 'DATA/test_geojson_Everything_1of3_v2.geojson'
     });
     map.addLayer({
-        'id': '3of3_jobSearch',
+        'id': 'a1of3_jobSearch',
         'type': 'circle',
-        'source': '3of3_jobSearch',
+        'source': 'a1of3_jobSearch',
         'layout': {
             'visibility': 'visible'
         },
         'paint': {
-            'circle-radius': 5,
+            'circle-radius': 4,
+            'circle-color': '#ddda7e'
+        },
+    });
+
+
+
+    map.addSource('a2of3_jobSearch', {
+        type: 'geojson',
+        // data: 'DATA/test_geojson_Everything_v5.geojson'
+        // data: 'DATA/test_geojson_Everything_Short3_v1.geojson'
+        data: 'DATA/test_geojson_Everything_2of3_v2.geojson'
+    });
+    map.addLayer({
+        'id': 'a2of3_jobSearch',
+        'type': 'circle',
+        'source': 'a2of3_jobSearch',
+        'layout': {
+            'visibility': 'visible'
+        },
+        'paint': {
+            'circle-radius': 4,
+            'circle-color': '#ffbc38'
+        },
+    });
+
+    map.addSource('a3of3_jobSearch', {
+        type: 'geojson',
+        // data: 'DATA/test_geojson_Everything_v5.geojson'
+        // data: 'DATA/test_geojson_Everything_Short3_v1.geojson'
+        data: 'DATA/test_geojson_Everything_3of3_v2.geojson'
+    });
+    map.addLayer({
+        'id': 'a3of3_jobSearch',
+        'type': 'circle',
+        'source': 'a3of3_jobSearch',
+        'layout': {
+            'visibility': 'visible'
+        },
+        'paint': {
+            'circle-radius': 4,
             'circle-color': '#b29443'
         },
     });
@@ -231,6 +276,10 @@ map.on('load', function () {
             'circle-color': '#ff9e9e'
         }
     });
+
+
+
+
     map.addSource('hospitals', {
         type: 'geojson',
         data: 'https://cohgis-mycity.opendata.arcgis.com/datasets/59d52cd8fa9d463ea7cf9f3c0a0c6ea2_10.geojson'
@@ -250,7 +299,9 @@ map.on('load', function () {
     });
 });
 
-var toggleableLayerIds = ['libraries', 'hospitals','schools','JobAds_AtoB','geology_geophys','3of3_jobSearch'];
+// var toggleableLayerIds = ['libraries', 'hospitals','schools','JobAds_AtoB','geology_geophys','a3of3_jobSearch','a2of3_jobSearch','a1of3_jobSearch'];
+
+var toggleableLayerIds = ['libraries', 'hospitals','schools','geology_geophys','a3of3_jobSearch','a2of3_jobSearch','a1of3_jobSearch'];
 
 for (var i = 0; i < toggleableLayerIds.length; i++) {
     var id = toggleableLayerIds[i];
@@ -284,7 +335,7 @@ for (var i = 0; i < toggleableLayerIds.length; i++) {
 
 map.on('click', function (e) {
     // console.log("test",)
-    var features = map.queryRenderedFeatures(e.point, { layers: ['geology_geophys','JobAds_AtoB','schools','libraries','hospitals','3of3_jobSearch'] });
+    var features = map.queryRenderedFeatures(e.point, { layers: ['geology_geophys','schools','libraries','hospitals','a3of3_jobSearch','a2of3_jobSearch','a1of3_jobSearch'] });
 
     if (!features.length) {
         return;
@@ -326,7 +377,7 @@ map.on('click', function (e) {
         .setHTML(feature.properties[layerSpecPopUp])
         .addTo(map);
     }
-    else if(layerID === 'geology_geophys' || layerID === '3of3_jobSearch'){
+    else if(layerID === 'geology_geophys' || layerID === 'a3of3_jobSearch' || layerID === 'a2of3_jobSearch' ||  layerID === 'a1of3_jobSearch'){
          // var popup_html = feature.properties["name"]+" | job_title="+feature.properties["job_title"]+" | "+feature.properties["address"]+" | google type="+feature.properties["types"]
          
          var popup_html_1 = feature.properties["name"]
