@@ -98,7 +98,7 @@
         background-color: #ddda7e;
         color: #ffffff;
     }
-    #menu a.a3of3_jobSearch {
+    #menu a.job_search {
         background-color: #b29443;
         color: #ffffff;
     }
@@ -193,7 +193,12 @@ map.on('load', function () {
         },
         'paint': {
             'circle-radius': 5,
-            'circle-color': '#bf8cdb'
+            // 'circle-color': '#bf8cdb'
+            'circle-color': {
+                property: 'job_title',
+                type: 'categorical',
+                stops: [["geophysicist",'#ff0000'],["geologist",'#0008ff']]
+            },
         },
     });
 
@@ -239,22 +244,27 @@ map.on('load', function () {
         },
     });
 
-    map.addSource('a3of3_jobSearch', {
+    map.addSource('job_search', {
         type: 'geojson',
         // data: 'DATA/test_geojson_Everything_v5.geojson'
         // data: 'DATA/test_geojson_Everything_Short3_v1.geojson'
-        data: 'DATA/test_geojson_Everything_3of3_v2.geojson'
+        data: 'DATA/test_geojsonWithIndustry_vB.geojson'
     });
     map.addLayer({
-        'id': 'a3of3_jobSearch',
+        'id': 'job_search',
         'type': 'circle',
-        'source': 'a3of3_jobSearch',
+        'source': 'job_search',
         'layout': {
             'visibility': 'visible'
         },
         'paint': {
             'circle-radius': 4,
-            'circle-color': '#b29443'
+            // 'circle-color': '#b29443',
+            'circle-color': {
+                property: 'industry',
+                type: 'categorical',
+                stops: [["health",'light blue'],["other",'yellow'],["space",'red'],['petroleum','green']]
+            },
         },
     });
 
@@ -278,8 +288,6 @@ map.on('load', function () {
     });
 
 
-
-
     map.addSource('hospitals', {
         type: 'geojson',
         data: 'https://cohgis-mycity.opendata.arcgis.com/datasets/59d52cd8fa9d463ea7cf9f3c0a0c6ea2_10.geojson'
@@ -294,14 +302,14 @@ map.on('load', function () {
         },
        'paint': {
             'circle-radius': 4,
-            'circle-color': '#81bce6'
+            'circle-color': '#81bce6',
         }
     });
 });
 
-// var toggleableLayerIds = ['libraries', 'hospitals','schools','JobAds_AtoB','geology_geophys','a3of3_jobSearch','a2of3_jobSearch','a1of3_jobSearch'];
+// var toggleableLayerIds = ['libraries', 'hospitals','schools','JobAds_AtoB','geology_geophys','job_search','a2of3_jobSearch','a1of3_jobSearch'];
 
-var toggleableLayerIds = ['libraries', 'hospitals','schools','geology_geophys','a3of3_jobSearch','a2of3_jobSearch','a1of3_jobSearch'];
+var toggleableLayerIds = ['libraries', 'hospitals','schools','geology_geophys','job_search','a2of3_jobSearch','a1of3_jobSearch'];
 
 for (var i = 0; i < toggleableLayerIds.length; i++) {
     var id = toggleableLayerIds[i];
@@ -335,7 +343,7 @@ for (var i = 0; i < toggleableLayerIds.length; i++) {
 
 map.on('click', function (e) {
     // console.log("test",)
-    var features = map.queryRenderedFeatures(e.point, { layers: ['geology_geophys','schools','libraries','hospitals','a3of3_jobSearch','a2of3_jobSearch','a1of3_jobSearch'] });
+    var features = map.queryRenderedFeatures(e.point, { layers: ['geology_geophys','schools','libraries','hospitals','job_search','a2of3_jobSearch','a1of3_jobSearch'] });
 
     if (!features.length) {
         return;
@@ -377,14 +385,14 @@ map.on('click', function (e) {
         .setHTML(feature.properties[layerSpecPopUp])
         .addTo(map);
     }
-    else if(layerID === 'geology_geophys' || layerID === 'a3of3_jobSearch' || layerID === 'a2of3_jobSearch' ||  layerID === 'a1of3_jobSearch'){
+    else if(layerID === 'geology_geophys' || layerID === 'job_search' || layerID === 'a2of3_jobSearch' ||  layerID === 'a1of3_jobSearch'){
          // var popup_html = feature.properties["name"]+" | job_title="+feature.properties["job_title"]+" | "+feature.properties["address"]+" | google type="+feature.properties["types"]
          
          var popup_html_1 = feature.properties["name"]
          var popup_html_2 = "job_title = "+feature.properties["job_title"]
          var popup_html_3 = "company searched for = "+feature.properties["commpany_searched_for"]
          var popup_html_4 = "address = "+feature.properties["address"]
-         var popup_html_5 = "google type = "+feature.properties["types"]
+         var popup_html_5 = "google type = "+feature.properties["industry"]
 
 
 
