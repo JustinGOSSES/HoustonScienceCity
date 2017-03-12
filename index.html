@@ -94,18 +94,18 @@
         background-color: #bf8cdb;
         color: #ffffff;
     }
-    #menu a.a1of3_jobSearch {
+   /* #menu a.a1of3_jobSearch {
         background-color: #ddda7e;
         color: #ffffff;
-    }
+    }*/
     #menu a.job_search {
         background-color: #b29443;
         color: #ffffff;
     }
-    #menu a.a2of3_jobSearch {
+    /*#menu a.a2of3_jobSearch {
         background-color: #ffbc38;
         color: #ffffff;
-    }
+    }*/
 
     #menu a.libraries {
         background-color: #ff9e9e;
@@ -204,45 +204,45 @@ map.on('load', function () {
 
 
 
-    map.addSource('a1of3_jobSearch', {
-        type: 'geojson',
-        // data: 'DATA/test_geojson_Everything_v5.geojson'
-        // data: 'DATA/test_geojson_Everything_Short3_v1.geojson'
-        data: 'DATA/test_geojson_Everything_1of3_v2.geojson'
-    });
-    map.addLayer({
-        'id': 'a1of3_jobSearch',
-        'type': 'circle',
-        'source': 'a1of3_jobSearch',
-        'layout': {
-            'visibility': 'visible'
-        },
-        'paint': {
-            'circle-radius': 4,
-            'circle-color': '#ddda7e'
-        },
-    });
+    // map.addSource('a1of3_jobSearch', {
+    //     type: 'geojson',
+    //     // data: 'DATA/test_geojson_Everything_v5.geojson'
+    //     // data: 'DATA/test_geojson_Everything_Short3_v1.geojson'
+    //     data: 'DATA/test_geojson_Everything_1of3_v2.geojson'
+    // });
+    // map.addLayer({
+    //     'id': 'a1of3_jobSearch',
+    //     'type': 'circle',
+    //     'source': 'a1of3_jobSearch',
+    //     'layout': {
+    //         'visibility': 'visible'
+    //     },
+    //     'paint': {
+    //         'circle-radius': 4,
+    //         'circle-color': '#ddda7e'
+    //     },
+    // });
 
 
 
-    map.addSource('a2of3_jobSearch', {
-        type: 'geojson',
-        // data: 'DATA/test_geojson_Everything_v5.geojson'
-        // data: 'DATA/test_geojson_Everything_Short3_v1.geojson'
-        data: 'DATA/test_geojson_Everything_2of3_v2.geojson'
-    });
-    map.addLayer({
-        'id': 'a2of3_jobSearch',
-        'type': 'circle',
-        'source': 'a2of3_jobSearch',
-        'layout': {
-            'visibility': 'visible'
-        },
-        'paint': {
-            'circle-radius': 4,
-            'circle-color': '#ffbc38'
-        },
-    });
+    // map.addSource('a2of3_jobSearch', {
+    //     type: 'geojson',
+    //     // data: 'DATA/test_geojson_Everything_v5.geojson'
+    //     // data: 'DATA/test_geojson_Everything_Short3_v1.geojson'
+    //     data: 'DATA/test_geojson_Everything_2of3_v2.geojson'
+    // });
+    // map.addLayer({
+    //     'id': 'a2of3_jobSearch',
+    //     'type': 'circle',
+    //     'source': 'a2of3_jobSearch',
+    //     'layout': {
+    //         'visibility': 'visible'
+    //     },
+    //     'paint': {
+    //         'circle-radius': 4,
+    //         'circle-color': '#ffbc38'
+    //     },
+    // });
 
     map.addSource('job_search', {
         type: 'geojson',
@@ -309,7 +309,7 @@ map.on('load', function () {
 
 // var toggleableLayerIds = ['libraries', 'hospitals','schools','JobAds_AtoB','geology_geophys','job_search','a2of3_jobSearch','a1of3_jobSearch'];
 
-var toggleableLayerIds = ['libraries', 'hospitals','schools','geology_geophys','job_search','a2of3_jobSearch','a1of3_jobSearch'];
+var toggleableLayerIds = ['libraries', 'hospitals','schools','geology_geophys','job_search'];
 
 for (var i = 0; i < toggleableLayerIds.length; i++) {
     var id = toggleableLayerIds[i];
@@ -343,7 +343,7 @@ for (var i = 0; i < toggleableLayerIds.length; i++) {
 
 map.on('click', function (e) {
     // console.log("test",)
-    var features = map.queryRenderedFeatures(e.point, { layers: ['geology_geophys','schools','libraries','hospitals','job_search','a2of3_jobSearch','a1of3_jobSearch'] });
+    var features = map.queryRenderedFeatures(e.point, { layers: ['geology_geophys','schools','libraries','hospitals','job_search'] });
 
     if (!features.length) {
         return;
