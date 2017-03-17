@@ -1,0 +1,53 @@
+{'location': [29.76, -95.37], 'tweets': [Status(ID=831171766890459136, ScreenName=MBCAHouston, Created=Mon Feb 13 16:02:46 +0000 2017, Text='The latest The MBCA Houston Daily! https://t.co/b5IWEKpcd9 Thanks to @ARtvKimatni #actuallivingscientist #was17')]}
+{'location': [29.75, -95.35], 'tweets': [Status(ID=831171766890459136, ScreenName=MBCAHouston, Created=Mon Feb 13 16:02:46 +0000 2017, Text='The latest The MBCA Houston Daily! https://t.co/b5IWEKpcd9 Thanks to @ARtvKimatni #actuallivingscientist #was17')]}
+{'location': [29.72, -95.36], 'tweets': [Status(ID=831171766890459136, ScreenName=MBCAHouston, Created=Mon Feb 13 16:02:46 +0000 2017, Text='The latest The MBCA Houston Daily! https://t.co/b5IWEKpcd9 Thanks to @ARtvKimatni #actuallivingscientist #was17')]}
+{'location': [29.72, -95.42], 'tweets': [Status(ID=831171766890459136, ScreenName=MBCAHouston, Created=Mon Feb 13 16:02:46 +0000 2017, Text='The latest The MBCA Houston Daily! https://t.co/b5IWEKpcd9 Thanks to @ARtvKimatni #actuallivingscientist #was17')]}
+{'location': [29.74, -95.39], 'tweets': [Status(ID=831171766890459136, ScreenName=MBCAHouston, Created=Mon Feb 13 16:02:46 +0000 2017, Text='The latest The MBCA Houston Daily! https://t.co/b5IWEKpcd9 Thanks to @ARtvKimatni #actuallivingscientist #was17')]}
+{'location': [29.77, -95.41], 'tweets': [Status(ID=831171766890459136, ScreenName=MBCAHouston, Created=Mon Feb 13 16:02:46 +0000 2017, Text='The latest The MBCA Houston Daily! https://t.co/b5IWEKpcd9 Thanks to @ARtvKimatni #actuallivingscientist #was17')]}
+{'location': [29.8, -95.42], 'tweets': [Status(ID=831171766890459136, ScreenName=MBCAHouston, Created=Mon Feb 13 16:02:46 +0000 2017, Text='The latest The MBCA Houston Daily! https://t.co/b5IWEKpcd9 Thanks to @ARtvKimatni #actuallivingscientist #was17')]}
+{'location': [29.8, -95.37], 'tweets': [Status(ID=831171766890459136, ScreenName=MBCAHouston, Created=Mon Feb 13 16:02:46 +0000 2017, Text='The latest The MBCA Houston Daily! https://t.co/b5IWEKpcd9 Thanks to @ARtvKimatni #actuallivingscientist #was17')]}
+{'location': [29.75, -95.36], 'tweets': [Status(ID=831171766890459136, ScreenName=MBCAHouston, Created=Mon Feb 13 16:02:46 +0000 2017, Text='The latest The MBCA Houston Daily! https://t.co/b5IWEKpcd9 Thanks to @ARtvKimatni #actuallivingscientist #was17')]}
+{'location': [29.74, -95.31], 'tweets': [Status(ID=831171766890459136, ScreenName=MBCAHouston, Created=Mon Feb 13 16:02:46 +0000 2017, Text='The latest The MBCA Houston Daily! https://t.co/b5IWEKpcd9 Thanks to @ARtvKimatni #actuallivingscientist #was17')]}
+{'location': [29.72, -95.27], 'tweets': [Status(ID=831171766890459136, ScreenName=MBCAHouston, Created=Mon Feb 13 16:02:46 +0000 2017, Text='The latest The MBCA Houston Daily! https://t.co/b5IWEKpcd9 Thanks to @ARtvKimatni #actuallivingscientist #was17')]}
+{'location': [29.79, -95.23], 'tweets': [Status(ID=831171766890459136, ScreenName=MBCAHouston, Created=Mon Feb 13 16:02:46 +0000 2017, Text='The latest The MBCA Houston Daily! https://t.co/b5IWEKpcd9 Thanks to @ARtvKimatni #actuallivingscientist #was17')]}
+{'location': [29.98, -95.46], 'tweets': []}
+{'location': [29.76, -95.17], 'tweets': []}
+{'location': [29.86, -95.3], 'tweets': []}
+{'location': [29.69, -95.25], 'tweets': []}
+{'location': [29.83, -95.43], 'tweets': [Status(ID=831171766890459136, ScreenName=MBCAHouston, Created=Mon Feb 13 16:02:46 +0000 2017, Text='The latest The MBCA Houston Daily! https://t.co/b5IWEKpcd9 Thanks to @ARtvKimatni #actuallivingscientist #was17')]}
+{'location': [29.76, -95.38], 'tweets': [Status(ID=831171766890459136, ScreenName=MBCAHouston, Created=Mon Feb 13 16:02:46 +0000 2017, Text='The latest The MBCA Houston Daily! https://t.co/b5IWEKpcd9 Thanks to @ARtvKimatni #actuallivingscientist #was17')]}
+{'location': [29.77, -95.31], 'tweets': [Status(ID=831171766890459136, ScreenName=MBCAHouston, Created=Mon Feb 13 16:02:46 +0000 2017, Text='The latest The MBCA Houston Daily! https://t.co/b5IWEKpcd9 Thanks to @ARtvKimatni #actuallivingscientist #was17')]}
+{'location': [29.7, -95.36], 'tweets': [Status(ID=831171766890459136, ScreenName=MBCAHouston, Created=Mon Feb 13 16:02:46 +0000 2017, Text='The latest The MBCA Houston Daily! https://t.co/b5IWEKpcd9 Thanks to @ARtvKimatni #actuallivingscientist #was17')]}
+{'location': [29.83, -95.38], 'tweets': [Status(ID=831171766890459136, ScreenName=MBCAHouston, Created=Mon Feb 13 16:02:46 +0000 2017, Text='The latest The MBCA Houston Daily! https://t.co/b5IWEKpcd9 Thanks to @ARtvKimatni #actuallivingscientist #was17')]}
+{'location': [29.72, -95.32], 'tweets': [Status(ID=831171766890459136, ScreenName=MBCAHouston, Created=Mon Feb 13 16:02:46 +0000 2017, Text='The latest The MBCA Houston Daily! https://t.co/b5IWEKpcd9 Thanks to @ARtvKimatni #actuallivingscientist #was17')]}
+{'location': [29.77, -95.51], 'tweets': [Status(ID=831171766890459136, ScreenName=MBCAHouston, Created=Mon Feb 13 16:02:46 +0000 2017, Text='The latest The MBCA Houston Daily! https://t.co/b5IWEKpcd9 Thanks to @ARtvKimatni #actuallivingscientist #was17')]}
+{'location': [29.69, -95.43], 'tweets': [Status(ID=831171766890459136, ScreenName=MBCAHouston, Created=Mon Feb 13 16:02:46 +0000 2017, Text='The latest The MBCA Houston Daily! https://t.co/b5IWEKpcd9 Thanks to @ARtvKimatni #actuallivingscientist #was17')]}
+{'location': [29.8, -95.33], 'tweets': [Status(ID=831171766890459136, ScreenName=MBCAHouston, Created=Mon Feb 13 16:02:46 +0000 2017, Text='The latest The MBCA Houston Daily! https://t.co/b5IWEKpcd9 Thanks to @ARtvKimatni #actuallivingscientist #was17')]}
+{'location': [29.74, -95.45], 'tweets': [Status(ID=831171766890459136, ScreenName=MBCAHouston, Created=Mon Feb 13 16:02:46 +0000 2017, Text='The latest The MBCA Houston Daily! https://t.co/b5IWEKpcd9 Thanks to @ARtvKimatni #actuallivingscientist #was17')]}
+{'location': [29.83, -95.29], 'tweets': [Status(ID=831171766890459136, ScreenName=MBCAHouston, Created=Mon Feb 13 16:02:46 +0000 2017, Text='The latest The MBCA Houston Daily! https://t.co/b5IWEKpcd9 Thanks to @ARtvKimatni #actuallivingscientist #was17')]}
+{'location': [29.76, -95.26], 'tweets': [Status(ID=831171766890459136, ScreenName=MBCAHouston, Created=Mon Feb 13 16:02:46 +0000 2017, Text='The latest The MBCA Houston Daily! https://t.co/b5IWEKpcd9 Thanks to @ARtvKimatni #actuallivingscientist #was17')]}
+{'location': [29.71, -95.4], 'tweets': [Status(ID=831171766890459136, ScreenName=MBCAHouston, Created=Mon Feb 13 16:02:46 +0000 2017, Text='The latest The MBCA Houston Daily! https://t.co/b5IWEKpcd9 Thanks to @ARtvKimatni #actuallivingscientist #was17')]}
+{'location': [29.65, -95.55], 'tweets': []}
+{'location': [29.99, -95.35], 'tweets': []}
+{'location': [29.67, -95.34], 'tweets': []}
+{'location': [29.62, -95.19], 'tweets': []}
+{'location': [29.65, -95.48], 'tweets': []}
+{'location': [29.7, -95.53], 'tweets': []}
+{'location': [29.89, -95.39], 'tweets': []}
+{'location': [29.92, -95.44], 'tweets': []}
+{'location': [29.91, -95.34], 'tweets': []}
+{'location': [29.87, -95.53], 'tweets': []}
+{'location': [29.86, -95.58], 'tweets': []}
+{'location': [29.74, -95.56], 'tweets': []}
+{'location': [29.81, -95.58], 'tweets': []}
+{'location': [29.91, -95.18], 'tweets': []}
+{'location': [29.64, -95.43], 'tweets': []}
+{'location': [29.73, -95.43], 'tweets': [Status(ID=831171766890459136, ScreenName=MBCAHouston, Created=Mon Feb 13 16:02:46 +0000 2017, Text='The latest The MBCA Houston Daily! https://t.co/b5IWEKpcd9 Thanks to @ARtvKimatni #actuallivingscientist #was17')]}
+{'location': [29.61, -95.39], 'tweets': []}
+{'location': [29.62, -95.32], 'tweets': []}
+{'location': [29.83, -95.15], 'tweets': []}
+{'location': [29.9, -95.27], 'tweets': []}
+{'location': [29.66, -95.38], 'tweets': []}
+{'location': [29.58, -95.46], 'tweets': []}
+{'location': [29.68, -95.4], 'tweets': [Status(ID=831171766890459136, ScreenName=MBCAHouston, Created=Mon Feb 13 16:02:46 +0000 2017, Text='The latest The MBCA Houston Daily! https://t.co/b5IWEKpcd9 Thanks to @ARtvKimatni #actuallivingscientist #was17')]}
+{'location': [29.8, -95.49], 'tweets': [Status(ID=831171766890459136, ScreenName=MBCAHouston, Created=Mon Feb 13 16:02:46 +0000 2017, Text='The latest The MBCA Houston Daily! https://t.co/b5IWEKpcd9 Thanks to @ARtvKimatni #actuallivingscientist #was17')]}

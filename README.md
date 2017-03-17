@@ -4,7 +4,9 @@ Current map is <a href="https://justingosses.github.io/HoustonScienceCity/">live
 
 
 ## Purpose:
-Exploration of the idea you could map out all the different places science is taught, applied, and created in Houston, thereby giving people a greater appreciation of how pevarsive it is in their lives and their community. 
+####This is an exploration of the concept of trying to find all the different places science is created, taught, and applied in Houston and put them on a single map. 
+Although it is not exhaustive, it is amazing how fast you get up to several thousand points where science is done in Houston. The goal was to give people a greater appreciation of how pevarsive Science is in their their community. This was inspired by the March for Science in 2017. Although the discussion around cuts in funding and hurdles for government communication of science is centered on government agencies, those impacts will get dispirsed rather quickly out to state and local agencies where science is used as well as the countless private companies who will be negatively effected if the science infrastructure in the U.S. is cut away.
+
 
 ## Possibe End Product:
 ##### Series of maps exploring the geographic distribution of sciencec in Houston
@@ -48,16 +50,23 @@ Exploration of the idea you could map out all the different places science is ta
 	- geoJSON for various categories (schools, hospitals, museums, etc.) being pulled via a get request that returns geoJSon from the city of Houston's <a href='http://cohgis-mycity.opendata.arcgis.com/' target="blank">open data GIS portal</a>. 
 
 
+### Current Status:
+At this time, I have a single map with all the job search data points as well as three geojsons for hospitals, schools, and libraries from the city of Houston's open data portal. I also have a json of various twitter posts with the #actuallylivingscitentist hashtag in the Houston area grouped around zip code centroids. I have not put the twiter data onto a map yet. 
+
+#### Methods (in progress):
+Most of the datapoints come from the job search data. Basically I start with a list of science jobs, I look for those jobs programatically in the Houston area over the last 30 days and get back the names of all the companies advertising for that job or a very similar sounding job. I then take that list of companies and use the google places API to return all the addresses of that company in Houston. I then put those locations with the science job title tied to that location on the map. Eventually, I will use a random forest machine learning to clean up the data as there seems to be at least 20% false positives in the data right now. 
+
 ### Current Github Location: 
 https://github.com/JustinGOSSES/HoustonScienceCity.git
 
 ### Started the map from this example:
 https://www.mapbox.com/mapbox-gl-js/example/toggle-layers/
 
+
 ---------------------------------------
 
 
-## Methods Brainstorming:
+<!-- ## Methods Brainstorming:
 1.Starting off using geojson from the city of Houston's <a href='http://cohgis-mycity.opendata.arcgis.com/' target="blank">open data GIS portal</a>. 
 
 2. One possible way to find businesses that use science is to webscrape or a job website's API to search for all job advertisements over the last year that mention a word from a list of words for scientist. The next step would be to pull company names from those returns and use a google places API to find all the locations. Those latitudes could be plotted on the map with some of the meta data. There would be false positives, but it might work out alright?
@@ -68,7 +77,7 @@ https://www.mapbox.com/mapbox-gl-js/example/toggle-layers/
 
 - Another method would be to do a series of twitter API searches around the #reallivingscientist with the distance criteria of 10 or 20 kilometers and the centerpoint set to various zip code centerpoints. The data wouldn't be specific to an exact point but could at least be positioned at neighborhood level and could involved photos and text. 
 	- This works well. It requires a bit more work on formatting into better organized json, compilation of multiple API calls into a single file, and then transformation into geoJSON to get it on the map. 
-
+ -->
 
 #### Original List of Potential Map Data:
 - Houston science twitter handles?
