@@ -58,7 +58,7 @@ Most of the datapoints come from the job search data. Basically I start with a l
 
 ### In Progress:
 The most immediate next step is to use machine-learning to clean up all the false positives in the data.
-After that, the next steps will be around making the maps more user friendly such that they can tell a story. 
+For example, satellite is often returning a satellite location of some business, not a company that works on satellites. After that, the next steps will be around making the maps more user friendly such that they can tell a story. I also need to spend some time getting the map to load faster. Right now the job search geojson loads very slowly and the user can accidentaly stop the load if they try to play with the map before it is finished loading. 
 
 ### Current Github Location: 
 https://github.com/JustinGOSSES/HoustonScienceCity.git
