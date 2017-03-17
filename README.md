@@ -7,6 +7,7 @@ Current map is <a href="https://justingosses.github.io/HoustonScienceCity/">live
 #### This is an exploration of the concept of trying to find all the different places science is created, taught, and applied in Houston and put them on a single map. 
 Although it is not exhaustive, it is amazing how fast you get up to several thousand points where science is done in Houston. The goal was to give people a greater appreciation of how pevarsive Science is in their their community. This was inspired by the March for Science in 2017. Although the discussion around cuts in funding and hurdles for government communication of science is centered on government agencies, those impacts will get dispursed rather quickly out to state and local agencies where science is used as well as the countless private companies who will be negatively effected if the science infrastructure in the U.S. is negatively impacted.
 
+# Don't trust the map yet, there are still false positives... maybe 20%
 
 ## Possibe End Product:
 ##### Series of maps exploring the geographic distribution of sciencec in Houston
