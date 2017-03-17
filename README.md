@@ -4,7 +4,7 @@ Current map is <a href="https://justingosses.github.io/HoustonScienceCity/">live
 
 
 ## Purpose:
-####This is an exploration of the concept of trying to find all the different places science is created, taught, and applied in Houston and put them on a single map. 
+#### This is an exploration of the concept of trying to find all the different places science is created, taught, and applied in Houston and put them on a single map. 
 Although it is not exhaustive, it is amazing how fast you get up to several thousand points where science is done in Houston. The goal was to give people a greater appreciation of how pevarsive Science is in their their community. This was inspired by the March for Science in 2017. Although the discussion around cuts in funding and hurdles for government communication of science is centered on government agencies, those impacts will get dispirsed rather quickly out to state and local agencies where science is used as well as the countless private companies who will be negatively effected if the science infrastructure in the U.S. is cut away.
 
 
@@ -56,6 +56,10 @@ At this time, I have a single map with all the job search data points as well as
 #### Methods (in progress):
 Most of the datapoints come from the job search data. Basically I start with a list of science jobs, I look for those jobs programatically in the Houston area over the last 30 days and get back the names of all the companies advertising for that job or a very similar sounding job. I then take that list of companies and use the google places API to return all the addresses of that company in Houston. I then put those locations with the science job title tied to that location on the map. Eventually, I will use a random forest machine learning to clean up the data as there seems to be at least 20% false positives in the data right now. 
 
+### In Progress:
+The most immediate next step is to use machine-learning to clean up all the false positives in the data.
+After that, the next steps will be around making the maps more user friendly and telling a story. 
+
 ### Current Github Location: 
 https://github.com/JustinGOSSES/HoustonScienceCity.git
 
@@ -80,19 +84,19 @@ https://www.mapbox.com/mapbox-gl-js/example/toggle-layers/
  -->
 
 #### Original List of Potential Map Data:
-- Houston science twitter handles?
+<!-- - Houston science twitter handles?
 - Job ad at this company mentioned science
 - Actually a Scientist
 - User provided information using google forms or google sheets, that then combines with other information
-	-- lat/long
-	-- Full street address with zip
-	-- Name
-	-- If government agency & type
-	-- Type of science, multiple okay
-	-- Website link
-	-- How the organization or site or data matters to you or others
-	-- In relation to this organization and their science work, are you worried about negative impact of funding reduction, censorship, or science not being used in policy?
-
+	- lat/long
+	- Full street address with zip
+	- Name
+	- If government agency & type
+	- Type of science, multiple okay
+	- Website link
+	- How the organization or site or data matters to you or others
+	- In relation to this organization and their science work, are you worried about negative impact of funding reduction, censorship, or science not being used in policy?
+ -->
 - Schools, Houston region (no universities!) City data types: 
 http://cohgis-mycity.opendata.arcgis.com/datasets/59d52cd8fa9d463ea7cf9f3c0a0c6ea2_0?geometry=-96.376%2C29.57%2C-94.399%2C29.927
 
@@ -117,5 +121,4 @@ http://cohgis-mycity.opendata.arcgis.com/datasets/59d52cd8fa9d463ea7cf9f3c0a0c6e
 - google places API - https://developers.google.com/places/web-service/search
 
 ### Early Map
-![bad photo!]
-(https://github.com/JustinGOSSES/HoustonScienceCity/blob/master/Images/earlyMap.png)
+![bad photo!](https://github.com/JustinGOSSES/HoustonScienceCity/blob/master/Images/earlyMap.png)
