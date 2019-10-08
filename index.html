@@ -121,14 +121,14 @@
     }
 </style>
 
-<nav id="menu"></nav>
+<nav id="menu">test</nav>
 <div id="map"></div>
 <div id="about">
     <a href="https://github.com/JustinGOSSES/HoustonScienceCity">
         <p>
             About This Map
         </p>
-        <p>Don't Trust Yet!</p>
+        <p><a href="https://justingosses.github.io/glasstiredatahack/kepler/index.html">Also check out the Art-vs-Science Houston Maps</a></p>
     </a>
 </div>
 <div class="title">
@@ -245,11 +245,15 @@ map.on('load', function () {
     //     },
     // });
 
+
     map.addSource('job_search', {
         type: 'geojson',
         // data: 'DATA/test_geojson_Everything_v5.geojson'
         // data: 'DATA/test_geojson_Everything_Short3_v1.geojson'
-        data: 'DATA/test_geojsonWithIndustry_vB.geojson'
+        //data: 'DATA/test_geojsonWithIndustry_vB.geojson'
+        //data: 'DATA/science_job_sites_just_good_ones_vH.geojson'
+        data: 'DATA/science_job_sites_just_good_ones_vI3.geojson'
+
     });
     map.addLayer({
         'id': 'job_search',
